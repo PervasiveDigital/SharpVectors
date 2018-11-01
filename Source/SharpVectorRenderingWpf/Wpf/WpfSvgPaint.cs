@@ -419,7 +419,8 @@ namespace SharpVectors.Renderers.Wpf
             SvgPaint fill;
             if (PaintType == SvgPaintType.None)
             {
-                return null;
+                var color = Color.FromArgb(0, 0, 0, 0);
+                return new SolidColorBrush(color);
             }
             if (PaintType == SvgPaintType.CurrentColor)
             {
